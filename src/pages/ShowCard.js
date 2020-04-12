@@ -44,7 +44,7 @@ import Card from '../components/Card.jsx';
                       },
                   ]
               })
-          }, 3000 ) }
+          }, 1000 ) }
 
           componentDidUpdate(prevProps, prevState){
             console.log({
