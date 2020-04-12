@@ -13,7 +13,7 @@ function Navbar() {
                     <strong className="namecompany text-info">YourJob</strong>
                 </a>
                 <nav className="my-2 my-md-0 mr-md-3">
-                    <Link to="/">
+                    <Link to="/home">
                     <a className="p-2 text-info" href="#" aria-disabled="true"> <strong className="navname text-info">Inicio</strong></a>
                     </Link>
                     <a className="p-2 text-info" href="#" aria-disabled="true"><strong className="navname text-info">SerWorker</strong></a>

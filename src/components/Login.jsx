@@ -56,7 +56,7 @@ class Login extends Component {
                         </div>
                                <button onClick={ ()=> this.submitForm()}
                                className="btn btn-info btn-sm btn-block mx-auto col-2 mt-4" type="submit">Ingresar</button>
-                               <Link to="/">
+                               <Link to="/home">
                                <button className="btn btn-info btn-sm btn-block mx-auto col-2 mt-4" type="submit">Regresar a Inicio</button>
                                </Link>
                                 <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>

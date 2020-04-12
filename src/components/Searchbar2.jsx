@@ -7,7 +7,7 @@ class Searchbar extends Component {
     render() {
         return (
 
-            <main className="inner">
+            <main className="inner2">
                 <div className="col-md-5 mb-3">
                     <h2 for="country justify-content-left "><strong>Busca aquí tu servicio</strong></h2>
                     <div className="row d-flex">

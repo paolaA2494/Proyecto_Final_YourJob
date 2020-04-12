@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './cards.css';
+import './App.css';
 import estrella from '../images/estrella.png';
 
 import { Link } from 'react-router-dom';
@@ -17,8 +17,8 @@ class Card extends React.Component {
                 <div className=" row ">
                 {this.props.info.map((info) => {
                     return (
-                        <div key={info.id}className="card" >
-                            <div className="card-body ">
+                        <div key={info.id}className="card mx-4" >
+                            <div className="card-body text-center">
                                 <img src={info.img} />
                                 <p className="card-title ">{info.Name}</p>
                     <p className="card-title"><img src={estrella} className="cards-img" width="5px"/>{info.calificacion}</p> 
