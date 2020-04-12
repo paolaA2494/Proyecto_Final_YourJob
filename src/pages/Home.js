@@ -2,16 +2,15 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Searchbar from '../components/Searchbar';
+import Login from '../components/Login';
 
 
-function App() {
+function Home() {
   return (
     <>
-    <Navbar/>
     <Searchbar />
-    <Footer/>
     </>
   );
 }
 
-export default App;
+export default Home;

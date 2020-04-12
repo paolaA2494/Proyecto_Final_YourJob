@@ -1,34 +1,33 @@
 import React, { Component } from 'react'
 import Logo from '../images/logo.png'
+import './App.css';
+import { Link } from 'react-router-dom';
 
+function Navbar() {
 
-class Navbar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
-    render() {
-        return (
-            <nav classnName="navbar is-light">
-                <div classnName="container">
-                    <div classnName="navbar-brand">
-                        <a classnName="navbar-item is-size-3 prefetch" href="/">
-                            <img alt="SaaSHub logo" width="200" height="auto"src={Logo}/>
-                                <span classnName="typography"></span>
-                                 </a>
-                            <div classnName="navbar-burger" data-target="navMenu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                          </div>
-                        </div>
-                     </nav> 
-            );
-    }
+    return (
+        <div class="navbar shadow-sm mb-auto">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img class="img-profile" width="200" height="auto" src={Logo} alt="Responsive-image" />
+                    <strong className="namecompany text-info">YourJob</strong>
+                </a>
+                <nav className="my-2 my-md-0 mr-md-3">
+                    <Link to="/">
+                    <a className="p-2 text-info" href="#" aria-disabled="true"> <strong className="navname text-info">Inicio</strong></a>
+                    </Link>
+                    <a className="p-2 text-info" href="#" aria-disabled="true"><strong className="navname text-info">SerWorker</strong></a>
+                    <Link to="/login">
+                    <a className="p-2 text-info" href="#" aria-disabled="true"><strong className="navname text-info">Iniciar Sesión</strong></a>
+                    </Link>
+                </nav>
+            </div>
+        </div>
+    );
 }
- 
-export default Navbar;
 
+
+
+export default Navbar;
 
 
