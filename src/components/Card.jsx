@@ -23,8 +23,8 @@ class Card extends React.Component {
                       {info.calificacion}
                     </p>
                     <p>{info.descripcion}</p>
-                    <Link to="/cv" class="btn btn-primary " target="blank">
-                      Ver mas
+                    <Link to="/cv">
+                      <button class="btn btn-primary">Ver mas</button> 
                     </Link>
                   </div>
                 </div>
