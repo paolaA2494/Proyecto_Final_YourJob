@@ -10,7 +10,7 @@ class Card extends React.Component {
     return (
       <div>
         <h2 className="card__title">Tenemos varias opciones para ti</h2>
-        <div className="container container-card d-flex justify-content-center text-center">
+        <div className="container-card d-flex mt-5">
           <div className=" row ">
             {this.props.info.map((info) => {
               return (

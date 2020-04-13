@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import $ from "jquery";
 import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import ReserveCv from "./components/ReserveCv";
+
 
 ReactDOM.render(
   <React.StrictMode>
