@@ -23,7 +23,7 @@ class Footer extends Component {
               <div class="footer_icons text-center">
                 <a
                   className="icon-face text-info mr-1"
-                  href="#"
+                  href="https://www.facebook.com/"
                   target="_blank"
                 >
                   <i>
@@ -32,7 +32,7 @@ class Footer extends Component {
                 </a>
                 <a
                   className="icon-face text-info mr-1"
-                  href="#"
+                  href="https://www.instagram.com/"
                   target="_blank"
                 >
                   <i>
@@ -41,7 +41,7 @@ class Footer extends Component {
                 </a>
                 <a
                   className="icon-face text-info mr-1"
-                  href="#"
+                  href="https://twitter.com/explore"
                   target="_blank"
                 >
                   <i>
@@ -50,7 +50,7 @@ class Footer extends Component {
                 </a>
                 <a
                   className="icon-face text-info mr-1"
-                  href="·"
+                  href="https://www.linkedin.com/"
                   target="_blank"
                 >
                   <i>

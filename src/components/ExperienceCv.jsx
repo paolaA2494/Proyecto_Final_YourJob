@@ -11,7 +11,7 @@ const ExperienceCv = (props) => {
         deserunt.
       </p>
       <br />
-      <p className="text-center ">
+      <p className="text-center mb-5">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
         laudantium illo delectus odio enim aliquam aperiam, ipsum illum, fugiat
         eius error numquam officia nemo doloribus consectetur deserunt rem odit

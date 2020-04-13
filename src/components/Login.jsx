@@ -60,21 +60,22 @@ class Login extends Component {
             required=""
           />
         </div>
-        <button
-          onClick={() => this.submitForm()}
-          className="btn btn-info btn-sm btn-block mx-auto col-2 mt-4"
-          type="submit"
-        >
-          Ingresar
-        </button>
-        <Link to="/home" className="text-decoration-none">
-          <button
-            className="btn btn-info btn-sm btn-block mx-auto col-2 mt-4"
-            type="submit"
-          >
-            Regresar a Inicio
-          </button>
-        </Link>
+        <div className="mx-auto col-6 mt-5 text-center">
+                        <button
+                            className="btn btn-info btn-sm col-3 mr-2"
+                            type="submit"
+                        >
+                            Registrar
+                         </button>
+                        <Link to="/home" className="text-decoration-none">
+                            <button
+                                className="btn btn-info btn-sm col-3 ml-2"
+                                type="submit"
+                            >
+                                Regresar a Inicio
+                        </button>
+                        </Link>
+                    </div>
         <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
       </form>
     );

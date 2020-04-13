@@ -16,7 +16,9 @@ function Navbar() {
                     <Link to="/home">
                     <a className="p-2 text-info" href="#" aria-disabled="true"> <strong className="navname text-info">Inicio</strong></a>
                     </Link>
+                    <Link to="/res">
                     <a className="p-2 text-info" href="#" aria-disabled="true"><strong className="navname text-info">SerWorker</strong></a>
+                    </Link>
                     <Link to="/login">
                     <a className="p-2 text-info" href="#" aria-disabled="true"><strong className="navname text-info">Iniciar Sesión</strong></a>
                     </Link>
