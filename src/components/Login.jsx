@@ -65,7 +65,7 @@ class Login extends Component {
                             className="btn btn-info btn-sm col-3 mr-2"
                             type="submit"
                         >
-                            Registrar
+                            Inciar sesión
                          </button>
                         <Link to="/home" className="text-decoration-none">
                             <button
