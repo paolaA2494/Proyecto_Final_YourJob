@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import estrella from "../images/estrella.png";
-import Reservation from "./Reservation";
+import Reservation from './Reservation';
 
 class Cv extends Component {
   constructor(props) {
