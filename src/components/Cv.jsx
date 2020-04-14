@@ -48,7 +48,7 @@ class Cv extends Component {
           </div> */}
           <Reservation />
         </div>
-        <div className="d-flex container-fluid">
+        <div className="d-flex container-fluid row">
           <div className="px-4 container-12 col-md-6">
             <h3 className="text-center mb-4 text-info">HABILIDADES</h3>
             <p className="text-center">
