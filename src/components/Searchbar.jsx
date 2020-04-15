@@ -6,12 +6,12 @@ class Searchbar extends Component {
   render() {
     return (
       <main className="inner">
-        <div className="col-md-5 mb-3">
-          <h2 for="country justify-content-left ">
+        <div className="col-md-5 mb-3 col-sm-8">
+          <h2 className="country justify-content-left ">
             <strong>Busca aquí tu servicio</strong>
           </h2>
-          <div className="row d-flex">
-            <select className="custom-select col-8" id="country" required="">
+          <div className="row d-flex justify-content-center">
+            <select className="custom-select col-8 " id="country" required="">
               <option value="">Seleccione...</option>
               <option>Plomeria</option>
               <option>Estética</option>
