@@ -12,12 +12,12 @@ class Footer extends Component {
     return (
       <div className="footer mt-auto shadow">
         <div className="footer-container d-flex justify-content-between">
-          <div className="general-info mt-3 pl-5 pr-5">
+          <div className="general-info mt-3 pl-5">
             <p>Téminos y condiciones</p>
             <p>Politica de Privacidad</p>
             <p className="text-info"> YorJob © 2020</p>
           </div>
-          <div className="contact-info mt-3 mr-5 ml-5 pl-5 pr-5">
+          <div className="contact-info mt-3 pr-5 ml-5">
             <h5 className="text-dark">Encuetranos en:</h5>
             <section>
               <div class="footer_icons text-center">

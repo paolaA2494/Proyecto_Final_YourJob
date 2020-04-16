@@ -60,19 +60,19 @@ class Login extends Component {
             required=""
           />
         </div>
-        <div className="mx-auto col-6 mt-5 text-center">
+        <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
                         <button
-                            className="btn btn-info btn-sm col-3 mr-2"
+                            className="btn btn-info btn-sm col-5 mr-1"
                             type="submit"
                         >
-                            Inciar sesión
+                            Ingresar
                          </button>
                         <Link to="/home" className="text-decoration-none">
                             <button
-                                className="btn btn-info btn-sm col-3 ml-2"
+                                className="btn btn-info btn-sm col-5 ml-1"
                                 type="submit"
                             >
-                                Regresar a Inicio
+                             Inicio
                         </button>
                         </Link>
                     </div>
