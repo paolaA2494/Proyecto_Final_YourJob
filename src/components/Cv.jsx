@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 import estrella from "../images/estrella.png";
 import Reservation from './Reservation';
 
@@ -6,6 +7,22 @@ class Cv extends Component {
   constructor(props) {
     super(props);
   }
+
+  componentDidMount (){
+   this.profileWorker();
+
+  }
+  
+profileWorker () {
+  axios.get('http://localhost:8080/workers')
+   .then((res) => {
+    let workers = res.workers
+
+   
+   })
+
+}
+   
   render() {
     return (
       <div className="container-fluid row justify-content-center">
