@@ -10,11 +10,11 @@ class Card extends React.Component {
     return (
       <div>
         <h2 className="card__title">Tenemos varias opciones para ti</h2>
-        <div className="container-card d-flex mt-5 justify-content-center">
-          <div className="row">
+        <div className="container-card d-flex mt-5 ">
+          <div className="row justify-content-center">
             {this.props.info.map((info) => {
               return (
-                <div key={info.id} className="card mx-4 mb-2">
+                <div key={info.id} className="container-col card mx-4 mb-4">
                   <div className="card-body text-center">
                     <img src={info.img} />
                     <p className="card-title ">{info.Name}</p>
@@ -24,9 +24,9 @@ class Card extends React.Component {
                     </p>
                     <p>{info.descripcion}</p>
 
-                    <button class="btn btn-primary">Ver mas</button>
-
-                    <button class="btn btn-info">Ver mas</button>
+                    <Link to="/cv">
+                      <button class="btn btn-info">Ver mas</button>
+                    </Link>
                   </div>
                 </div>
               );
