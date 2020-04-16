@@ -7,6 +7,9 @@ class Searchbar extends Component {
     return (
       <main className="inner">
         <div className="col-md-5 mb-3 col-sm-8">
+          <div>
+            <p className="">YourJob es una plataforma que busca a unir a prestadores de servicios Workers, con las personas que solicitan un servicio Users, </p>
+          </div>
           <h2 className="country justify-content-left ">
             <strong>Busca aquí tu servicio</strong>
           </h2>
