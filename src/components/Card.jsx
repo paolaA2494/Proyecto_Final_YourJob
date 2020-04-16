@@ -24,7 +24,7 @@ class Card extends React.Component {
                     </p>
                     <p>{info.descripcion}</p>
                     <Link to="/cv">
-                      <button class="btn btn-primary">Ver mas</button> 
+                      <button class="btn btn-primary">Ver mas</button>
                     </Link>
                   </div>
                 </div>
