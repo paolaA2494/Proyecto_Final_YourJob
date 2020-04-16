@@ -10,17 +10,10 @@ body {
   font-family: "Lobster", cursive;
 }
 
-.h3{
+.h3 {
   font-family: "Lobster", cursive;
-
 }
 
-
-.container-card{
-    justify-content: center;
-    text-align: center;
-
-}
 .inner {
   margin: 0;
   min-height: 70vh;
@@ -69,8 +62,6 @@ body {
   margin: 55px 0 0 0;
 }
 
-
-
 .cards-img {
   width: 25px;
   height: 25px;
@@ -78,11 +69,3 @@ body {
 }
 
 
-@media (max-width:767px){
-
-  .container-card{
-    justify-content: center;
-    text-align: center;
-
-}
-}
