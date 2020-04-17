@@ -8,7 +8,11 @@ class Searchbar extends Component {
       <main className="inner">
         <div className="col-md-5 mb-3 col-sm-8">
           <div>
-            <p className="">YourJob es una plataforma que busca a unir a prestadores de servicios Workers, con las personas que solicitan un servicio Users, </p>
+            <p className="">
+              YourJob es una plataforma que busca a unir a prestadores de
+              servicios Workers, con las personas que solicitan un servicio
+              Users,{" "}
+            </p>
           </div>
           <h2 className="country justify-content-left ">
             <strong>Busca aquí tu servicio</strong>
@@ -23,7 +27,7 @@ class Searchbar extends Component {
             </select>
             <div className="mx-auto col-3 ">
               <Link to="/showcard" className="text-decoration-none">
-                <button className="btn btn-dark btn-block " type="submit">
+                <button className="btn btn-dark  px-2 hola" type="submit">
                   Buscar
                 </button>
               </Link>
