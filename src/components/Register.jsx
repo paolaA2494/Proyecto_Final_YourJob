@@ -21,74 +21,84 @@ class Register extends Component {
                 </div>
 
                 <div className="mx-auto col-6">
-                    <label for="firstName">Nombre completo: <span class="obligate text-primary">*</span></label>
-                    <input type="text" className="form-control" id="firstName" placeholder="Ingrese su nombre completo" required="" />
-                    <div className="invalid-feedback">
-                        Valid first name is required.
-            </div>
+                    <label for="fullName">Nombre completo: <span class="obligate text-primary">*</span></label>
+                    <input type="text" className="form-control" id="fullName" placeholder="Ingrese su nombre completo" required="" />
                 </div>
 
                 <div className="mx-auto col-6 mt-4">
                     <label for="email">Email: <span class="obligate text-primary">*</span></label>
                     <input type="tel" className="form-control" id="email" placeholder="you@example.com" />
-                    <div className="invalid-feedback">
-                        Valid first name is required.
-          </div>
                 </div>
 
                 <div className="mx-auto col-6 mt-4">
                     <label for="cellphone">Teléfono de Contacto: <span class="obligate text-primary">*</span></label>
                     <input type="cellphone" className="form-control" id="cellphone" pattern="[0-12]{12}" placeholder="Ingrese su número de contacto" />
-                    <div className="invalid-feedback">
-                        Valid first name is required.
-          </div>
+                    
+                </div>
+               
+                <div className="mx-auto col-6 mt-4">
+                    <label for="about">Descripción: <span class="obligate text-primary">*</span></label>
+                    <textarea id="about" className="input-textarea col-12 d-block" name="comment" placeholder="Ingrese su descripción aquí"></textarea>
                 </div>
                 <div className="mx-auto col-6 mt-4">
-                    <label for="state">Ciudad: <span class="obligate text-primary">*</span></label>
-                    <select className="custom-select d-block w-100" id="state" required="">
-                        <option value="">Seleccione...</option>
-                        <option>Medellin</option>
-                        <option>Envigado</option>
-                        <option>Sabaneta</option>
-                        <option>Itagui</option>
-                        <option>La Estrella</option>
-                        <option>Barbosa</option>
-                    </select>
-                </div>
-                <div className="mx-auto col-6 mt-4">
-                <label for="state">Habilidades <span class="obligate text-primary">*</span></label>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="skill-plo"/>
+                    <label for="state">Tipo de servicio que presta <span class="obligate text-primary">*</span></label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="skill-plo" />
                         <label class="custom-control-label" for="skill-plo">Plomeria</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="skill-est"/>
-                        <label class="custom-control-label" for="skill-est">Estéticas</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="skill-ele"/>
-                        <label class="custom-control-label" for="skill-ele">Eléctricos</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="skill-mdg"/>
-                        <label class="custom-control-label" for="skill-mdg">Mantenimiento de gaseoductos</label>
-                </div>
-                </div>
-
-                    <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
-                        <button
-                            className="btn btn-info btn-sm col-5 mr-1"
-                            type="submit"
-                        >
-                            Registrar
-                         </button>
-                        
                     </div>
-                    <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
-        </form>
-      );
-    }
-  }
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="skill-est" />
+                        <label class="custom-control-label" for="skill-est">Estéticas</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="skill-ele" />
+                        <label class="custom-control-label" for="skill-ele">Eléctricos</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="skill-mdg" />
+                        <label class="custom-control-label" for="skill-mdg">Mantenimiento de gaseoductos</label>
+                    </div>
+                </div>
 
-  export default Register;
+                <div className="mx-auto col-6 mt-4">
+                    <label for="skils">Habilidades: <span class="obligate text-primary">*</span></label>
+                    <ul class="list-group">
+                       <li class="list-group-item text-info">Habilidad<input type="text" className="form-control" id="skill1" placeholder="Ingrese su habilidad aquí" required=""/></li>
+                       <li class="list-group-item text-info">Habilidad<input type="text" className="form-control" id="skill2" placeholder="Ingrese su habilidad aquí" required="" /></li>
+                       <li class="list-group-item text-info">Habilidad<input type="text" className="form-control" id="skill3" placeholder="Ingrese su habilidad aquí" required="" /></li>
+                    </ul>   
+                </div>
+
+                <div className="mx-auto col-6 mt-4">
+                    <label for="experience">Eperiencia: <span class="obligate text-primary">*</span></label>
+                    <ul class="list-group">
+                        <li class="list-group-item text-info">Año de experiencia<input type="text" className="form-control" id="year" placeholder="Ingrese el año de la experiencia" required="" /></li>
+                        <li class="list-group-item text-info">Empresa<input type="text" className="form-control" id="company" placeholder="Ingrese el año de la experiencia" required="" /></li>
+                        <li className="list-group-item text-info">Breve descripción<textarea id="description" className="input-textarea col-12 d-block" name="comment" placeholder="Ingrese su descripción aquí"></textarea></li>
+                    </ul>   
+                </div>
+
+                <div className="mx-auto col-6 mt-4">
+                    <label for="rate">Valor Hora de trabajo: <span class="obligate text-primary">*</span></label>
+                    <input type="cellphone" className="form-control" id="rate" pattern="[0-12]{12}" placeholder="$" />
+                    
+                </div>
+
+
+                <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
+                    <button
+                        className="btn btn-info btn-sm col-5 mr-1"
+                        type="submit"
+                    >
+                        Registrar
+                         </button>
+
+                </div>
+                <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
+            </form>
+        );
+    }
+}
+
+export default Register;
 

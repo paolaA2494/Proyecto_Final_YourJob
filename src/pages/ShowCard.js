@@ -22,7 +22,7 @@ class ShowCard extends React.Component {
             calificacion: "4.7",
             img: "https://www.gravatar.com/avatar?d=identicon",
             descripcion: "Lorem ipsum dolor sit amet.",
-            type: "estetica",
+            type: "",
           },
           {
             id: "d00d3614-101a-44ca-b6c2-0be075aeed3d",

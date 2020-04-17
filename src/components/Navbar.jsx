@@ -9,13 +9,14 @@ import { Link } from 'react-router-dom';
 function Navbar() {
 
     return (
-        <div class="navbar shadow-sm mb-auto">
-            <div class="container d-flex justify-content-center">
-                <div class="navbar-logo align-items-center mr-5">
-                    <img class="img-profile" width="200" height="auto" src={Logo} alt="Responsive-image" />
-                    <strong className="namecompany text-info">YourJob</strong>
+        <div class="navbar shadow-sm mb-auto text-center aling-items-center">
+            <div class="row w-100 justify-content-center ">
+                <div class="navbar-logo col-xl-6 col-lg-6  col-md-6 col-12">
+                    <img class="img-profile" width="150" height="150" src={Logo} alt="Responsive-image" />
+                   
                 </div>
-                <nav className="my-2 my-md-0 md-3">
+                <div className="navbar-sec col-xl-6 col-lg-6 col-md-6 col-12 aling-items-center mt-5 mb-2">
+                <nav>
                     <Link to="/home">
                     <a className="p-2 text-info" href="#" aria-disabled="true"> <strong className="navname text-info">Inicio</strong></a>
                     </Link>
@@ -26,6 +27,7 @@ function Navbar() {
                     <a className="p-2 text-info" href="#" aria-disabled="true"><strong className="navname text-info">Iniciar Sesión</strong></a>
                     </Link>
                 </nav>
+                </div>
             </div>
         </div>
     );
