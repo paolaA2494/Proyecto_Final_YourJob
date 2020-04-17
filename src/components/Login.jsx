@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Logo from "../images/logo.png";
 import "./App.css";
 import { Link } from "react-router-dom";
 
@@ -26,7 +25,6 @@ class Login extends Component {
     return (
       <form className="form-signin mt-5 mb-5">
         <div className="text-center mb-4 ">
-          <img className="mb-4" src={Logo} alt="" width="200" height="200" />
           <h1 className="h3 mb-3 font-weight-normal text-info font-weight-bold">
             Iniciar Sesión
           </h1>
@@ -67,14 +65,6 @@ class Login extends Component {
                         >
                             Ingresar
                          </button>
-                        <Link to="/home" className="text-decoration-none">
-                            <button
-                                className="btn btn-info btn-sm col-5 ml-1"
-                                type="submit"
-                            >
-                             Inicio
-                        </button>
-                        </Link>
                     </div>
         <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
       </form>
