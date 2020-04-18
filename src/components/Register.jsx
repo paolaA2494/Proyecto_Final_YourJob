@@ -1,92 +1,80 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Link, withRouter } from "react-router-dom";
-import axios from 'axios';
-
-
+import axios from "axios";
 
 class Register extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: false,
-            error: null,
-            form: {
-                photoProfile: "",
-                serviceType: "",
-                fullName: "",
-                email: "",
-                about: "",
-                rate: "",
-                ranking: "",
-                skills: [],
-                expirience: [
-                    {
-                        year: "",
-                        company: "",
-                        description: ""
-                    }],
-            }
-        }
-    }
-
-    handleChange = event => {
-        const target = event.target;
-        const value =  target.value;
-        console.log(value)
-        const name = target.name;
-
-        this.setState({
-            ...this.state,
-            form:{
-              ...this.state.form,
-              [name]: value
-            }
-            
-        });
-
-    }
-
-    handleChangeSkills = event =>{
-        const target = event.target;
-        const value =  target.value;
-        
-        this.setState({
-            
-            form:{
-              ...this.state.form,
-              skills:[
-
-                ...this.state.form.skills,
-                  value
-              ]
-              
-            }
-            
-        });
-
-    }
-
-    handleSubmit = e => {
-        e.preventDefault();
-        const data = this.state.form
-        axios.post('http://localhost:8080/workers', data)
-            .then(Cv => {
-                this.setState({
-                    loading: false,
-                })
-                this.props.history.push('/home')
-
-            }
-            )
-            .catch(error => {
-                this.setState({
-                    loading: false,
-                    error: error,
-                })
-            })
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+      error: null,
+      form: {
+        photoProfile: "",
+        serviceType: "",
+        fullName: "",
+        email: "",
+        about: "",
+        rate: "",
+        ranking: "",
+        skills: [],
+        expirience: [
+          {
+            year: "",
+            company: "",
+            description: "",
+          },
+        ],
+      },
     };
+  }
 
+  handleChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    console.log(value);
+    const name = target.name;
+
+    this.setState({
+      ...this.state,
+      form: {
+        ...this.state.form,
+        [name]: value,
+      },
+    });
+  };
+
+  handleChangeSkills = (event) => {
+    const target = event.target;
+    const value = target.value;
+
+    this.setState({
+      form: {
+        ...this.state.form,
+        skills: [...this.state.form.skills, value],
+      },
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const data = this.state.form
+    axios.post('https://your-job.now.sh/worker', data)
+        .then(Cv => {
+            this.setState({
+                loading: false,
+            })
+            this.props.history.push('/home')
+
+        }
+        )
+        .catch(error => {
+            this.setState({
+                loading: false,
+                error: error,
+            })
+        })
+};
 
     render() {
         return (
@@ -149,6 +137,7 @@ class Register extends Component {
                     </select>
 
                     {/*<div class="custom-control custom-checkbox">
+
                         <input onChange={this.handleChange} type="checkbox" class="custom-control-input" id="serviceType1" value="plomeria" name="serviceType"
                             checked={this.state.form.serviceType['plomeria']} />
                         <label class="custom-control-label" htmlFor="plomeria">Plomeria</label>
@@ -174,55 +163,126 @@ class Register extends Component {
                         <label class="custom-control-label" htmlFor="gaseoducto"
                         >Mantenimiento de gaseoductos</label>
                    </div>*/}
+                   
+        </div>
 
-                </div>
+        <div className="mx-auto col-6 mt-4">
+          <label htmlFor="skills">
+            Habilidades: <span class="obligate text-primary">*</span>
+          </label>
+          <ul class="list-group">
+            <li class="list-group-item text-info">
+              Habilidad
+              <input
+                onChange={this.handleChangeSkills}
+                type="text"
+                className="form-control"
+                id="skills1"
+                name="skills"
+                placeholder="Ingrese su habilidad aquí"
+                required=""
+                value={this.state.skills1}
+              />
+            </li>
+            <li class="list-group-item text-info">
+              Habilidad
+              <input
+                onChange={this.handleChangeSkills}
+                type="text"
+                className="form-control"
+                id="skills2"
+                name="skills"
+                placeholder="Ingrese su habilidad aquí"
+                required=""
+                value={this.state.skills2}
+              />
+            </li>
+            <li class="list-group-item text-info">
+              Habilidad
+              <input
+                onChange={this.handleChangeSkills}
+                type="text"
+                className="form-control"
+                id="skills3"
+                name="skills"
+                placeholder="Ingrese su habilidad aquí"
+                required=""
+                value={this.state.skills3}
+              />
+            </li>
+          </ul>
+        </div>
 
-                <div className="mx-auto col-6 mt-4">
-                    <label htmlFor="skills">Habilidades: <span class="obligate text-primary">*</span></label>
-                    <ul class="list-group">
-                        <li class="list-group-item text-info">Habilidad<input onChange={this.handleChangeSkills} type="text" className="form-control" id="skills1" name="skills" placeholder="Ingrese su habilidad aquí" required=""
-                            value={this.state.skills1} /></li>
-                        <li class="list-group-item text-info">Habilidad<input onChange={this.handleChangeSkills} type="text" className="form-control" id="skills2" name="skills" placeholder="Ingrese su habilidad aquí" required=""
-                            value={this.state.skills2} /></li>
-                        <li class="list-group-item text-info">Habilidad<input onChange={this.handleChangeSkills} type="text" className="form-control" id="skills3" name="skills" placeholder="Ingrese su habilidad aquí" required=""
-                            value={this.state.skills3} /></li>
-                    </ul>
-                </div>
+        <div className="mx-auto col-6 mt-4">
+          <label htmlFor="experience">
+            Eperiencia: <span class="obligate text-primary">*</span>
+          </label>
+          <ul class="list-group">
+            <li class="list-group-item text-info">
+              Año de experiencia
+              <input
+                onChange={this.handleChange}
+                type="number"
+                className="form-control"
+                name="year"
+                id="year"
+                placeholder="Ingrese el año de la experiencia"
+                required=""
+                value={this.state.year}
+              />
+            </li>
+            <li class="list-group-item text-info">
+              Empresa
+              <input
+                onChange={this.handleChange}
+                type="text"
+                className="form-control"
+                id="company"
+                name="company"
+                placeholder="Ingrese el año de la experiencia"
+                required=""
+                value={this.state.company}
+              />
+            </li>
+            <li className="list-group-item text-info">
+              Breve descripción
+              <textarea
+                onChange={this.handleChange}
+                id="description"
+                className="input-textarea col-12 d-block"
+                name="description"
+                placeholder="Ingrese su descripción aquí"
+                value={this.state.description}
+              ></textarea>
+            </li>
+          </ul>
+        </div>
 
-                <div className="mx-auto col-6 mt-4">
-                    <label htmlFor="experience">Eperiencia: <span class="obligate text-primary">*</span></label>
-                    <ul class="list-group">
-                        <li class="list-group-item text-info">Año de experiencia<input onChange={this.handleChange} type="number" className="form-control" name="year" id="year" placeholder="Ingrese el año de la experiencia" required=""
-                            value={this.state.year} /></li>
-                        <li class="list-group-item text-info">Empresa<input onChange={this.handleChange} type="text" className="form-control" id="company" name="company" placeholder="Ingrese el año de la experiencia" required=""
-                            value={this.state.company} /></li>
-                        <li className="list-group-item text-info">Breve descripción<textarea onChange={this.handleChange} id="description" className="input-textarea col-12 d-block" name="description" placeholder="Ingrese su descripción aquí"
-                            value={this.state.description}></textarea></li>
-                    </ul>
-                </div>
+        <div className="mx-auto col-6 mt-4">
+          <label htmlFor="rate">
+            Valor Hora de trabajo: <span class="obligate text-primary">*</span>
+          </label>
+          <input
+            onChange={this.handleChange}
+            type="number"
+            className="form-control"
+            id="rate"
+            name="rate"
+            pattern="[0-12]{12}"
+            placeholder="$"
+            value={this.state.rate}
+          />
+        </div>
 
-                <div className="mx-auto col-6 mt-4">
-                    <label htmlFor="rate">Valor Hora de trabajo: <span class="obligate text-primary">*</span></label>
-                    <input onChange={this.handleChange} type="number" className="form-control" id="rate" name="rate" pattern="[0-12]{12}" placeholder="$"
-                        value={this.state.rate} />
-
-                </div>
-
-
-                <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
-                    <button
-                        className="btn btn-info btn-sm col-5 mr-1"
-                        type="submit"
-                    >
-                        Registrar
-                         </button>
-
-                </div>
-                <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
-            </form>
-        );
-    }
+        <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
+          <button className="btn btn-info btn-sm col-5 mr-1" type="submit">
+            Registrar
+          </button>
+        </div>
+        <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
+      </form>
+    );
+  }
 }
 
 export default withRouter(Register);
-
