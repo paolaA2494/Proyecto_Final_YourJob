@@ -1,40 +1,25 @@
 import React, { Component } from "react";
-import axios from 'axios';
 import estrella from "../images/estrella.png";
 import Reservation from './Reservation';
 
+
 class Cv extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount (){
-   this.profileWorker();
-
-  }
-  
-profileWorker () {
-  axios.get('http://localhost:8080/workers')
-   .then((res) => {
-    let workers = res.workers
-
+  state = { 
    
-   })
+     };
 
-}
-   
   render() {
     return (
       <div className="container-fluid row justify-content-center">
         <div className="col-sm-6">
           <h1 className=" name text-center text-info mb-5 mt-2">
-            LEINA PULGARIN
+            {this.props.fullName}
           </h1>
           <img
             className="rounded-circle  m-auto d-block"
             width="250"
             height="250"
-            src="https://previews.123rf.com/images/oncombuntung/oncombuntung1406/oncombuntung140600006/29670152-car%C3%A1cter-con-el-pelo-negro-y-la-piel-draw-latino-en-dibujos-animados-y-estilo-c%C3%B3mico-retro-todos-los-elem.jpg"
+            src={this.props.photoProfile}
             alt="Responsive image"
           />
           <div className="d-flex justify-content-center my-4">
@@ -45,17 +30,18 @@ profileWorker () {
           </div>
           <div className="">
             <p className="text-center text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae necessitatibus repellendus voluptatibus possimus nobis
-              blanditiis accusamus fuga iusto earum incidunt nam nihil unde at,
-              nesciunt quaerat aspernatur! Natus corporis fuga vitae ea amet
-              veritatis, impedit unde tempora ducimus nihil animi?
+            {this.props.service}
+            </p>
+          </div>
+          <div className="">
+            <p className="text-center text-justify">
+            {this.props.about}
             </p>
           </div>
           <div className="d-flex justify-content-center mt-4 mb-2">
             <h3>Valor hora:</h3>{" "}
             <h3 className="text-info ml-2">
-              <strong>$150.000</strong>
+              <strong>{this.props.rate}</strong>
             </h3>
           </div>
           {/* <div className="mb-5">
@@ -69,34 +55,15 @@ profileWorker () {
           <div className="px-4 container-12 col-md-6">
             <h3 className="text-center mb-4 text-info">HABILIDADES</h3>
             <p className="text-center">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Distinctio illo veritatis molestias labore architecto sint illum,
-              ea totam tempore rem unde molestiae nam excepturi velit, dolorem
-              magnam possimus iste deserunt.
-            </p>
-            <br />
-            <p className="text-center mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              laudantium illo delectus odio enim aliquam aperiam, ipsum illum,
-              fugiat eius error numquam officia nemo doloribus consectetur
-              deserunt rem odit ex.
+            {this.props.skills.map((skill, index)=>(<span key={index}>{skill}</span>))}
             </p>
           </div>
           <div className="px-4 container-12 col-md-6">
             <h3 className="text-center text-info mb-4">EXPERIENCIA</h3>
             <p className="text-center ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Distinctio illo veritatis molestias labore architecto sint illum,
-              ea totam tempore rem unde molestiae nam excepturi velit, dolorem
-              magnam possimus iste deserunt.
+            {this.props.experience}
             </p>
-            <br />
-            <p className="text-center mb-5">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              laudantium illo delectus odio enim aliquam aperiam, ipsum illum,
-              fugiat eius error numquam officia nemo doloribus consectetur
-              deserunt rem odit ex.
-            </p>
+
           </div>
         </div>
       </div>

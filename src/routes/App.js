@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import LoginH from "../pages/LoginH";
 import ShowCard from "../pages/ShowCard";
 import Home from "../pages/Home";
-import Cv from "../components/Cv";
+import Newcv from "../pages/Newcv";
 import RegisterH from '../pages/ResgisterH';
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/showcard" component={ShowCard} />
-          <Route exact path="/cv" component={Cv} />
+          <Route exact path="/cv/:id" component={Newcv} />
         </Layout>
       </Switch>
     </BrowserRouter>

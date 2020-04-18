@@ -3,10 +3,19 @@ import "./App.css";
 import { Link } from "react-router-dom";
 
 class Searchbar extends Component {
+
+  
+
   handleSelectChange = (evet) => {
     const { handlChange } = this.props;
     handlChange(evet.target.value);
   };
+
+  handlSubmit = (evet) => {
+    evet.preventDefault();
+    console.log ("Buttom was clicked")
+          
+};
 
   render() {
     return (
@@ -15,6 +24,7 @@ class Searchbar extends Component {
           <h2 className="country justify-content-left ">
             <strong>Busca aquí tu servicio</strong>
           </h2>
+          <form onSubmit={this.handlSubmit}>
           <div className="row d-flex justify-content-center">
             <select
               className="custom-select col-8"
@@ -35,6 +45,7 @@ class Searchbar extends Component {
               </button>
             </div>
           </div>
+          </form>
         </div>
       </main>
     );
