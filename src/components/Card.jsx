@@ -22,7 +22,7 @@ class Card extends React.Component {
               return (
                 <div key={item.id} className="container-col card mx-4 mb-4">
                   <div className="card-body text-center">
-                    <img src={item.photoProfile} />
+                    <img src={item.photoProfile} className="rounded" alt="Responsive image" width="100" height="100"/>
                     <p className="card-title ">{item.fullName}</p>
                     <p className="card-title">
                       <img src={estrella} className="cards-img" width="5px" />

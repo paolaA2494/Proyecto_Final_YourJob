@@ -75,7 +75,7 @@ class Register extends Component {
                 this.setState({
                     loading: false,
                 })
-                this.props.history.push('/showcard')
+                this.props.history.push('/home')
 
             }
             )
