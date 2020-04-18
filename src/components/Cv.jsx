@@ -61,7 +61,7 @@ class Cv extends Component {
           <div className="px-4 container-12 col-md-6">
             <h3 className="text-center text-info mb-4">EXPERIENCIA</h3>
             <p className="text-center ">
-            {this.props.experience}
+            {this.props.experience.map((experience, index)=>(<span key={index}>{experience}</span>))}
             </p>
 
           </div>

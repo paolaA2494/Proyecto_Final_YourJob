@@ -7,12 +7,23 @@ import { Link } from "react-router-dom";
 
 class Card extends React.Component {
 
+  
+
   constructor(props){
     super(props)
   }
   
   render() {
-    const {info} = this.props
+    const {info} = this.props;
+
+    if(this.props.info.length ==0){
+      return(
+          <div>
+             <h3> No tiene su hoja de vida registrada Registrala </h3> 
+             <Link to="/resh">Create new CV</Link>
+          </div>
+      )
+  }
     return (
       <div>
         <h2 className="card__title">Tenemos varias opciones para ti</h2>
