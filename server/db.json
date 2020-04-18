@@ -8,12 +8,7 @@
       "about": "I-m developer fullstack .....",
       "rate": "50000",
       "ranking": "3.4",
-      "skills": [
-        "javascript",
-        "development",
-        "react",
-        "git"
-      ],
+      "skills": ["javascript", "development", "react", "git"],
       "expirience": [
         {
           "year": 2020,
@@ -44,10 +39,7 @@
       "about": "Sit aut quia non du",
       "rate": "61",
       "ranking": "",
-      "skills": [
-        "jajajaja",
-        "jwjwjw"
-      ],
+      "skills": ["jajajaja", "jwjwjw"],
       "expirience": [
         {
           "year": "",
