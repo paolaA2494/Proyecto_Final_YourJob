@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import estrella from "../images/estrella.png";
-import Reservation from './Reservation';
-
+import Reservation from "./Reservation";
 
 class Cv extends Component {
-  state = { 
-   
-     };
+  state = {};
 
   render() {
     return (
@@ -29,14 +26,10 @@ class Cv extends Component {
             </h2>
           </div>
           <div className="">
-            <p className="text-center text-justify">
-            {this.props.service}
-            </p>
+            <p className="text-center text-justify">{this.props.service}</p>
           </div>
           <div className="">
-            <p className="text-center text-justify">
-            {this.props.about}
-            </p>
+            <p className="text-center text-justify">{this.props.about}</p>
           </div>
           <div className="d-flex justify-content-center mt-4 mb-2">
             <h3>Valor hora:</h3>{" "}
@@ -44,26 +37,21 @@ class Cv extends Component {
               <strong>{this.props.rate}</strong>
             </h3>
           </div>
-          {/* <div className="mb-5">
-            <button type="button" class="btn btn-info m-auto d-block">
-              Solicitar servicio
-           </button>
-          </div> */}
+
           <Reservation />
         </div>
         <div className="d-flex container-fluid row">
           <div className="px-4 container-12 col-md-6">
             <h3 className="text-center mb-4 text-info">HABILIDADES</h3>
             <p className="text-center">
-            {this.props.skills.map((skill, index)=>(<span key={index}>{skill}</span>))}
+              {this.props.skills.map((skill, index) => (
+                <span key={index}>{skill}</span>
+              ))}
             </p>
           </div>
           <div className="px-4 container-12 col-md-6">
             <h3 className="text-center text-info mb-4">EXPERIENCIA</h3>
-            <p className="text-center ">
-            {this.props.experience}
-            </p>
-
+            <p className="text-center ">{this.props.experience}</p>
           </div>
         </div>
       </div>

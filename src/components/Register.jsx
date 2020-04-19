@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Link, withRouter } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 class Register extends Component {
   constructor(props) {
@@ -27,6 +28,15 @@ class Register extends Component {
         ],
       },
     };
+    // this._Alerta = this._Alerta.bind(this);
+  }
+
+  _Alerta() {
+    Swal.fire(
+      "Su registro ha sido exitoso, para YourJob es un gusto trabajar contigo!",
+      "You clicked the button",
+      "success"
+    );
   }
 
   handleChange = (event) => {
@@ -65,7 +75,7 @@ class Register extends Component {
         this.setState({
           loading: false,
         });
-        this.props.history.push("/showcard");
+        this.props.history.push("/home");
       })
       .catch((error) => {
         this.setState({
@@ -168,33 +178,6 @@ class Register extends Component {
             <option value="electrico">Eléctrico</option>
             <option value="gaseoducto">Mantenimiento de gaseoductos</option>
           </select>
-
-          {/*<div class="custom-control custom-checkbox">
-                        <input onChange={this.handleChange} type="checkbox" class="custom-control-input" id="serviceType1" value="plomeria" name="serviceType"
-                            checked={this.state.form.serviceType['plomeria']} />
-                        <label class="custom-control-label" htmlFor="plomeria">Plomeria</label>
-                    </div>
-
-                    <div class="custom-control custom-checkbox">
-                        <input onChange={this.handleChange} type="checkbox" class="custom-control-input" id="serviceType2" value="estetica" name="serviceType"
-                            checked={this.state.serviceType2} />
-                        <label class="custom-control-label" htmlFor="estetica"
-                        >Estéticas</label>
-                    </div>
-
-                    <div class="custom-control custom-checkbox">
-                        <input onChange={this.handleChange} type="checkbox" class="custom-control-input" id="serviceType3" value="electrico"
-                            checked={this.state.serviceType3} />
-                        <label class="custom-control-label" htmlFor="electrico"
-                        >Eléctricos</label>
-                    </div>
-
-                    <div class="custom-control custom-checkbox">
-                        <input onChange={this.handleChange} type="checkbox" class="custom-control-input" id="serviceType4" value="gaseoducto"
-                            checked={this.state.serviceType4} />
-                        <label class="custom-control-label" htmlFor="gaseoducto"
-                        >Mantenimiento de gaseoductos</label>
-                   </div>*/}
         </div>
 
         <div className="mx-auto col-6 mt-4">
@@ -306,7 +289,11 @@ class Register extends Component {
         </div>
 
         <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
-          <button className="btn btn-info btn-sm col-5 mr-1" type="submit">
+          <button
+            onClick={this._Alerta}
+            className="btn btn-info btn-sm col-5 mr-1"
+            type="submit"
+          >
             Registrar
           </button>
         </div>
