@@ -6,6 +6,8 @@ import ShowCard from "../pages/ShowCard";
 import Home from "../pages/Home";
 import Newcv from "../pages/Newcv";
 import RegisterH from '../pages/ResgisterH';
+import FoundError from '../pages/FoundError'
+
 
 const App = () => {
 
@@ -14,11 +16,12 @@ const App = () => {
       <Switch>
         <Route path="/loginh" component={LoginH} />
         <Route path="/resh" component={RegisterH} />
+       
         <Layout>
-          <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/showcard" component={ShowCard} />
           <Route exact path="/cv/:id" component={Newcv} />
+          <Route component={FoundError} />
         </Layout>
       </Switch>
     </BrowserRouter>

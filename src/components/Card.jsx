@@ -2,6 +2,7 @@ import React from "react";
 
 import "./App.css";
 import estrella from "../images/estrella.png";
+import Gravatar from './Grvatar'
 
 import { Link } from "react-router-dom";
 
@@ -33,7 +34,15 @@ class Card extends React.Component {
               return (
                 <div key={item.id} className="container-col card mx-4 mb-4">
                   <div className="card-body text-center">
-                    <img src={item.photoProfile} />
+                  <Gravatar
+    className="rounded-circle  m-auto d-block"
+    width="250"
+    height="250"
+    email={item.email}
+    alt="Responsive image"
+  /> 
+                    
+                   
                     <p className="card-title ">{item.fullName}</p>
                     <p className="card-title">
                       <img src={estrella} className="cards-img" width="5px" />
@@ -49,7 +58,7 @@ class Card extends React.Component {
               );
             })}
           </div>
-        </div>
+        </div> 
       </div>
     );
   }

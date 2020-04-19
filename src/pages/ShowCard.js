@@ -28,7 +28,7 @@ class ShowCard extends React.Component {
 
   getData = async () => {
     try {
-      const { data } = await axios.get('http://localhost:3004/workers')
+      const { data } = await axios.get('https://your-job.now.sh/worker')
       this.setState({ loading: false, data: data });
       // this.setState({
       //   data

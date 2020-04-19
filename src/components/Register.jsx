@@ -65,7 +65,7 @@ class Register extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const data = this.state.form
-    axios.post('https://your-job.now.sh/worker', data)
+    axios.post('https://your-job.now.sh/workery', data)
       .then(Cv => {
         this.setState({
           loading: false,
