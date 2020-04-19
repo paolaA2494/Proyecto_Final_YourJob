@@ -18,13 +18,7 @@ class Newcv extends Component {
         rate: "",
         ranking: "",
         skills: [],
-        expirience: [
-          {
-            year: "",
-            company: "",
-            description: "",
-          },
-        ],
+        experience: [],
       },
     };
   }

@@ -20,7 +20,7 @@ class Footer extends Component {
           <div className="contact-info mt-3 pr-5 ml-5">
             <h5 className="text-dark">Encuetranos en:</h5>
             <section>
-              <div class="footer_icons text-center">
+              <div className="footer_icons text-center">
                 <a
                   className="icon-face text-info mr-1"
                   href="https://www.facebook.com/"

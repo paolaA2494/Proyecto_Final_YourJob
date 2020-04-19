@@ -19,13 +19,7 @@ class Register extends Component {
         rate: "",
         ranking: "",
         skills: [],
-        expirience: [
-          {
-            year: "",
-            company: "",
-            description: "",
-          },
-        ],
+        experience: [],
       },
     };
     // this._Alerta = this._Alerta.bind(this);
@@ -62,6 +56,18 @@ class Register extends Component {
       form: {
         ...this.state.form,
         skills: [...this.state.form.skills, value],
+      },
+    });
+  };
+
+  handleChangeExperience = (event) => {
+    const target = event.target;
+    const value = target.value;
+
+    this.setState({
+      form: {
+        ...this.state.form,
+        experience: [...this.state.form.experience, value],
       },
     });
   };
@@ -235,7 +241,7 @@ class Register extends Component {
             <li class="list-group-item text-info">
               Año de experiencia
               <input
-                onChange={this.handleChange}
+                onChange={this.handleChangeExperience}
                 type="number"
                 className="form-control"
                 name="year"
@@ -248,7 +254,7 @@ class Register extends Component {
             <li class="list-group-item text-info">
               Empresa
               <input
-                onChange={this.handleChange}
+                onChange={this.handleChangeExperience}
                 type="text"
                 className="form-control"
                 id="company"
@@ -261,7 +267,7 @@ class Register extends Component {
             <li className="list-group-item text-info">
               Breve descripción
               <textarea
-                onChange={this.handleChange}
+                onChange={this.handleChangeExperience}
                 id="description"
                 className="input-textarea col-12 d-block"
                 name="description"
