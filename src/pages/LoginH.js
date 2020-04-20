@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import Navbar from '../components/Navbar';
 import Login from '../components/Login';
 
 
@@ -12,7 +11,6 @@ class LoginH extends Component {
         return ( 
 
             <React.Fragment>
-                <Navbar />
                 <Login />
             </React.Fragment>
 

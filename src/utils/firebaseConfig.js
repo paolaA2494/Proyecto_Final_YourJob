@@ -5,6 +5,8 @@ export default {
   projectId: "auth-6babc",
   storageBucket: "auth-6babc.appspot.com",
   messagingSenderId: "1097763816363",
-  appId: "1:1097763816363:web:84ccb7b50775d9d4afc8ee",
-  measurementId: "G-J9QMCW8RB2"
-  };
+  appId: "1:1097763816363:web:710723931acef021afc8ee",
+  measurementId: "G-D005M2EBW0",
+};
+
+

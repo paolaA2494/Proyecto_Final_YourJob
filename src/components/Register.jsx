@@ -18,8 +18,12 @@ class Register extends Component {
         about: "",
         rate: "",
         ranking: "",
-        skills: [],
-        experience: [],
+        skills1: "",
+        skills2:"",
+        sikills3: "",
+        experience1: "",
+        experience2: "",
+        experience3: "",
       },
     };
     // this._Alerta = this._Alerta.bind(this);
@@ -48,30 +52,32 @@ class Register extends Component {
     });
   };
 
-  handleChangeSkills = (event) => {
-    const target = event.target;
-    const value = target.value;
+  // handleChangeSkills = (event) => {
+  //   const target = event.target;
+  //   const value = target.value;
 
-    this.setState({
-      form: {
-        ...this.state.form,
-        skills: [...this.state.form.skills, value],
-      },
-    });
-  };
+  //   this.setState({
+  //     form: {
+  //       ...this.state.form,
+  //       skills: [...this.state.form.skills, value],
+  //     },
+  //   });
+  // };
 
-  handleChangeExperience = (event) => {
-    const target = event.target;
-    const value = target.value;
+  // handleChangeExperience = (event) => {
+  //   const target = event.target;
+  //   const value = target.value;
+  //   console.log(value)
 
-    this.setState({
-      form: {
-        ...this.state.form,
-        experience: [...this.state.form.experience, value],
-      },
-    });
-  };
-
+  //   this.setState({
+  //     form: {
+  //       ...this.state.form,
+  //       experience: [...this.state.form.experience, value],
+  //     },
+  //   });
+  // };
+  
+  
   handleSubmit = (e) => {
     e.preventDefault();
     const data = this.state.form;
@@ -194,11 +200,11 @@ class Register extends Component {
             <li class="list-group-item text-info">
               Habilidad
               <input
-                onChange={this.handleChangeSkills}
+                onChange={this.handleChange}
                 type="text"
                 className="form-control"
                 id="skills1"
-                name="skills"
+                name="skills1"
                 placeholder="Ingrese su habilidad aquí"
                 required=""
                 value={this.state.skills1}
@@ -207,11 +213,11 @@ class Register extends Component {
             <li class="list-group-item text-info">
               Habilidad
               <input
-                onChange={this.handleChangeSkills}
+                onChange={this.handleChange}
                 type="text"
                 className="form-control"
                 id="skills2"
-                name="skills"
+                name="skills2"
                 placeholder="Ingrese su habilidad aquí"
                 required=""
                 value={this.state.skills2}
@@ -220,11 +226,11 @@ class Register extends Component {
             <li class="list-group-item text-info">
               Habilidad
               <input
-                onChange={this.handleChangeSkills}
+                onChange={this.handleChange}
                 type="text"
                 className="form-control"
                 id="skills3"
-                name="skills"
+                name="skills3"
                 placeholder="Ingrese su habilidad aquí"
                 required=""
                 value={this.state.skills3}
@@ -241,38 +247,38 @@ class Register extends Component {
             <li class="list-group-item text-info">
               Año de experiencia
               <input
-                onChange={this.handleChangeExperience}
+                onChange={this.handleChange}
                 type="number"
                 className="form-control"
-                name="year"
+                name="experience1"
                 id="year"
                 placeholder="Ingrese el año de la experiencia"
                 required=""
-                value={this.state.year}
+                value={this.state.experience1}
               />
             </li>
             <li class="list-group-item text-info">
               Empresa
               <input
-                onChange={this.handleChangeExperience}
+                onChange={this.handleChange}
                 type="text"
                 className="form-control"
                 id="company"
-                name="company"
+                name="experience2"
                 placeholder="Ingrese el año de la experiencia"
                 required=""
-                value={this.state.company}
+                value={this.state.experience2}
               />
             </li>
             <li className="list-group-item text-info">
               Breve descripción
               <textarea
-                onChange={this.handleChangeExperience}
+                 onChange={this.handleChange}
                 id="description"
                 className="input-textarea col-12 d-block"
-                name="description"
+                name="experience3"
                 placeholder="Ingrese su descripción aquí"
-                value={this.state.description}
+                value={this.state.experience3}
               ></textarea>
             </li>
           </ul>

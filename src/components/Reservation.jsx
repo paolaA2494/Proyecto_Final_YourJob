@@ -8,6 +8,7 @@ class Reservation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+
  
   }
 
@@ -31,11 +32,12 @@ class Reservation extends React.Component {
   });
 
   console.log("fjvei")
+
   }
   
   render() {
     return (
-      <div className="mb-5">
+      <div className="mb-5 ">
         
          
         <button

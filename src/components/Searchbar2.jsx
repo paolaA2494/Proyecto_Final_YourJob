@@ -21,9 +21,9 @@ class Searchbar extends Component {
     return (
       <main className="inner2">
         <div className="col-md-5 mb-3 col-sm-8">
-          <h2 className="country justify-content-left ">
+          <h3 className="country text-center text-black-50">
             <strong>Busca aquí tu servicio</strong>
-          </h2>
+          </h3>
           <form onSubmit={this.handlSubmit}>
           <div className="row d-flex justify-content-center">
             <select
@@ -39,11 +39,7 @@ class Searchbar extends Component {
               <option value="electrico">Eléctrico</option>
               <option value="gaseoducto">Mantenimiento de gaseoductos</option>
             </select>
-            <div className="mx-auto col-3">
-              <button className="btn btn-dark btn-block" type="submit">
-                Buscar
-              </button>
-            </div>
+        
           </div>
           </form>
         </div>

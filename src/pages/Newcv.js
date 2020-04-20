@@ -18,8 +18,12 @@ class Newcv extends Component {
         about: "",
         rate: "",
         ranking: "",
-        skills: [],
-        experience: [],
+        skills1: "",
+        skills2:"",
+        sikills3: "",
+        experience1: "",
+        experience2: "",
+        experience3: "",
       },
     };
   }
@@ -52,8 +56,12 @@ class Newcv extends Component {
           about={this.state.details.about || "SOBRE"}
           rate={this.state.details.rate || "RATE"}
           email={this.state.details.email || "EMAIL"}
-          skills={this.state.details.skills || "skills"}
-          experience={this.state.details.experience || "experience"}
+          skills1={this.state.details.skills1 || "skills"}
+          skills2={this.state.details.skills2 || "skills"}
+          skills3={this.state.details.skills3 || "skills"}
+          experience1={this.state.details.experience1 || "experience"}
+          experience2={this.state.details.experience2 || "experience"}
+          experience3={this.state.details.experience3 || "experience"}
           photoProfile={
             this.state.details.photoProfile ||
             "https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/article/public/RS8003_GettyImages-994576028-hig.jpg?itok=USdYN3SJ"

@@ -1,111 +1,80 @@
 import React, { Component } from "react";
-import {FaGoogle } from "react-icons/fa";
-import "./App.css";
-import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa";
 import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
-import firebaseConfig from './firebaseConfig';
-
+import firebaseConfig from '../utils/firebaseConfig';
+import "./App.css";
+import { Link } from 'react-router-dom';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: " ",
-      password: "",
-    };
-  }
-
-  valueToState(value, property) {
-    let state = {};
-    state[property] = value;
-    this.setState(state);
-  }
-
-  submitForm() {
-    console.log(this.state);
-  }
 
   render() {
-
     const {
       user,
       signOut,
-      signInWithGoogle,
+      signInWithFacebook,
     } = this.props;
 
-    
+
     return (
-      //<form className="form-signin mt-5 mb-5">
       <>
-        <div className="text-center  mt-5 mb-4 ">
-          <h1 className="h3 mb-3 font-weight-normal text-info font-weight-bold">
-            Iniciar Sesión
-          </h1>
-          <p>Inicia sesión como Worker o como User</p>
-        </div>
 
-        <div className="form-label-group text-center">
-          <input
-            onChange={(event) => {
-              this.valueToState(event.target.value, "email");
-            }}
-            type="email"
-            value={this.state.email}
-            id="inputEmail"
-            className="form-control mx-auto col-4 mt-5"
-            placeholder="Email address"
-            required=""
-          />
-        </div>
+        <div className="container-fluid  row align-items-center vh-100 justify-content-center text-center">
+          <div className="Login">
+            <div className="Login-container">
+              <div className="Login-content">
 
-        <div className="form-label-group text-center">
-          <input
-            onChange={(event) => {
-              this.valueToState(event.target.value, "password");
-            }}
-            type="password"
-            value={this.state.password}
-            id="inputPassword"
-            className="form-control mx-auto col-4 mt-3"
-            placeholder="Password"
-            required=""
-          />
-        </div>
-        <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
-            {
-              user
-                ? <button className="btn border border-info btn-ligth btn-sm col-5 mr-1" onClick={signOut} >Sign out</button>
-                : <button className="btn border border-info btn-ligth  btn-sm col-5 mr-1" onClick={signInWithGoogle}> <i className="tex-center-info mr-2">
-                <FaGoogle />
-              </i>Sign in with Google</button>
 
-            }
+                {
+                  user
+                    ? <>
+                      <h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">¡Bienvenido!</h2>
+                      <p>{user.displayName}</p>
+                      <img class="rounded-circle mb-3" width="110" 
+                       height="110" src={user.photoURL} alt="Responsive-image" /></>
+                    : <><h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h2>
+                      <p>Por favor ingrese</p></>
+                }
 
-        </div>
-        <div className="mx-auto col-6 col-ms-12 mt-2 text-center justify-content-center">
-                        <button
-                            className="btn btn-info btn-sm col-5 mr-1"
-                            type="submit"
-                        >
-                            Ingresar
-                         </button>
+                {
+                  user
+                    ? <div className="out">
+                      <button onClick={signOut} className="btn border border-info my-2" >
+                        <span>Cerrar Sesión</span>
+                      </button>
                     </div>
-        <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
-        </>
-      //</form>
+
+                    : <div className="facebook">
+                      <button onClick={signInWithFacebook} className="btn border border-info mb-2"  >
+                        <i className="text-info"><FaFacebookF /></i>
+                        <span>Continuar con Facebook</span>
+                      </button>
+                      <Link to="/home" className="text-decoration-none">
+                        <button className="btn border btn-info mt-3 d-block m-auto"  >
+                          <span>Inicio</span>
+                        </button>
+                      </Link>
+                    </div>
+                }
+                <p className="mt-5 mb-3 text-center text-info"> YourJob © 2020</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </>
     );
   }
 }
 
-
 const firebaseAppAuth = firebaseApp.auth();
 
 const providers = {
-  googleProvider: new firebase.auth.GoogleAuthProvider(),
+  facebookProvider: new firebase.auth.FacebookAuthProvider(),
 };
 
 export default withFirebaseAuth({
