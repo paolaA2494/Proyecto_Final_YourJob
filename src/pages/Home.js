@@ -1,9 +1,6 @@
 import React,{Component} from 'react';
 import Searchbar from '../components/Searchbar';
-<<<<<<< HEAD
-=======
 
->>>>>>> 24198f3c851d12e660dcf0cf222107a6b3ed8876
 
 
 
