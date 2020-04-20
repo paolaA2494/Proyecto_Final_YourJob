@@ -49,7 +49,7 @@ class Reservation extends React.Component {
         <button
                 
                 onClick={this.onClick}
-                className="btn btn-info col-3 mr-1"
+                className="btn btn-info  mr-1"
                 type="submit"
               >
                  Confirmar Servicio
