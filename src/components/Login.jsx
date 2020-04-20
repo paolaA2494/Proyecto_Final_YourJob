@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaFacebookF } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
@@ -15,7 +15,7 @@ class Login extends Component {
     const {
       user,
       signOut,
-      signInWithFacebook,
+      signInWithGoogle,
     } = this.props;
 
 
@@ -34,7 +34,8 @@ class Login extends Component {
                       <h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">¡Bienvenido!</h2>
                       <p>{user.displayName}</p>
                       <img class="rounded-circle mb-3" width="110" 
-                       height="110" src={user.photoURL} alt="Responsive-image" /></>
+                       height="110" src={user.photoURL} alt="Responsive-image" />
+                       <p>{user.email}</p></>
                     : <><h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h2>
                       <p>Por favor ingrese</p></>
                 }
@@ -48,9 +49,9 @@ class Login extends Component {
                     </div>
 
                     : <div className="facebook">
-                      <button onClick={signInWithFacebook} className="btn border border-info mb-2"  >
-                        <i className="text-info"><FaFacebookF /></i>
-                        <span>Continuar con Facebook</span>
+                      <button onClick={signInWithGoogle} className="btn border border-info mb-2"  >
+                        <i className="text-info mr-1 text-center"><FaGoogle /></i>
+                        <span>Continuar con Google</span>
                       </button>
                       <Link to="/home" className="text-decoration-none">
                         <button className="btn border btn-info mt-3 d-block m-auto"  >
@@ -74,7 +75,7 @@ class Login extends Component {
 const firebaseAppAuth = firebaseApp.auth();
 
 const providers = {
-  facebookProvider: new firebase.auth.FacebookAuthProvider(),
+   googleProvider: new firebase.auth.GoogleAuthProvider(),
 };
 
 export default withFirebaseAuth({
