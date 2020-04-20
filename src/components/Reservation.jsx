@@ -3,6 +3,8 @@ import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
 
 
+
+
 class Reservation extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +20,7 @@ class Reservation extends React.Component {
     );
   }
 
+
   onClick = () =>{
     this._Alerta()
     var template_params = {
@@ -25,11 +28,13 @@ class Reservation extends React.Component {
       "from_name": this.props.fullName,
       }
 
-      emailjs.send('gmail','template_qqZFO6an' , template_params,'user_XyXd4XEss2SwWfC8pqNvp' )
+      emailjs.send('gmail','template_bYg9fKfE' , template_params,'user_xD9elWf14F7djoaxBeUmk' )
       .then((response) => { 
       console.log('SUCCESS!', response.status, response.text);
       }, (err) => {
       console.log('FAILED...', err);
+
+     
   });
 
   console.log("fjvei")
