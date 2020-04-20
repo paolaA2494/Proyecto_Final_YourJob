@@ -11,11 +11,7 @@ class Searchbar extends Component {
     handlChange(evet.target.value);
   };
 
-  handlSubmit = (evet) => {
-    evet.preventDefault();
-    console.log ("Buttom was clicked")
-          
-};
+ 
 
   render() {
     return (

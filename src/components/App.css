@@ -96,3 +96,7 @@ h1 {
   word-wrap: break-word;
 }
 
+.footer{
+  position: relative;
+  top: 30%;
+}

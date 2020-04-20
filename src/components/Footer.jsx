@@ -10,7 +10,8 @@ import "./App.css";
 class Footer extends Component {
   render() {
     return (
-      <div className="footer mt-auto shadow">
+      <div className="vh-50">
+      <div className="footer shadow">
         <div className="footer-container d-flex justify-content-between">
           <div className="general-info mt-3 pl-5">
             <p>Téminos y condiciones</p>
@@ -61,6 +62,7 @@ class Footer extends Component {
             </section>
           </div>
         </div>
+      </div>
       </div>
     );
   }

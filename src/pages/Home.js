@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import Searchbar from '../components/Searchbar';
-import FormJob from '../components/FormJob';
 
 
 

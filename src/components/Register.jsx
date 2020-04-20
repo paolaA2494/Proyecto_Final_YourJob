@@ -26,12 +26,12 @@ class Register extends Component {
         experience3: "",
       },
     };
-    // this._Alerta = this._Alerta.bind(this);
+    
   }
 
   _Alerta() {
     Swal.fire(
-      "Su registro ha sido exitoso, para YourJob es un gusto trabajar contigo!",
+      "Su registro ha sido exitoso, para YourJob es un gusto trabajar contigo!😃",
       "You clicked the button",
       "success"
     );
@@ -52,31 +52,6 @@ class Register extends Component {
     });
   };
 
-  // handleChangeSkills = (event) => {
-  //   const target = event.target;
-  //   const value = target.value;
-
-  //   this.setState({
-  //     form: {
-  //       ...this.state.form,
-  //       skills: [...this.state.form.skills, value],
-  //     },
-  //   });
-  // };
-
-  // handleChangeExperience = (event) => {
-  //   const target = event.target;
-  //   const value = target.value;
-  //   console.log(value)
-
-  //   this.setState({
-  //     form: {
-  //       ...this.state.form,
-  //       experience: [...this.state.form.experience, value],
-  //     },
-  //   });
-  // };
-  
   
   handleSubmit = (e) => {
     e.preventDefault();
