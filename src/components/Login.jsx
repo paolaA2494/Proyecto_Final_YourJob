@@ -20,7 +20,7 @@ class Login extends Component {
 
 
     return (
-      <>
+      <div>
 
         <div className="container-fluid  row align-items-center vh-100 justify-content-center text-center">
           <div className="Login">
@@ -30,12 +30,13 @@ class Login extends Component {
 
                 {
                   user
-                    ? <>
+                    ? <div>
                       <h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">¡Bienvenido!</h2>
                       <p>{user.displayName}</p>
                       <img class="rounded-circle mb-3" width="110" 
                        height="110" src={user.photoURL} alt="Responsive-image" />
-                       <p>{user.email}</p></>
+                       <p>{user.email}</p>
+                       </div>
                     : <><h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h2>
                       <p>Por favor ingrese</p></>
                 }
@@ -46,6 +47,11 @@ class Login extends Component {
                       <button onClick={signOut} className="btn border border-info my-2" >
                         <span>Cerrar Sesión</span>
                       </button>
+                      <Link to="/home" className="text-decoration-none">
+                        <button className="btn border btn-info mt-3 d-block m-auto"  >
+                          <span>Inicio</span>
+                        </button>
+                      </Link>
                     </div>
 
                     : <div className="facebook">
@@ -67,7 +73,7 @@ class Login extends Component {
 
         </div>
         
-      </>
+      </div>
     );
   }
 }
