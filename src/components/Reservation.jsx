@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from 'emailjs-com';
+import Swal from "sweetalert2";
 
 
 
@@ -10,17 +11,23 @@ class Reservation extends React.Component {
  
   }
 
+ 
+
   onClick = () =>{
+
+  
     var template_params = {
       "to_email": this.props.email,
       "from_name": this.props.fullName,
       }
 
-      emailjs.send('gmail','template_qqZFO6an' , template_params,'user_XyXd4XEss2SwWfC8pqNvp' )
+      emailjs.send('gmail','template_bYg9fKfE' , template_params,'user_xD9elWf14F7djoaxBeUmk' )
       .then((response) => { 
       console.log('SUCCESS!', response.status, response.text);
       }, (err) => {
       console.log('FAILED...', err);
+
+     
   });
 
   console.log("fjvei")
@@ -33,6 +40,8 @@ class Reservation extends React.Component {
          
         <button
                 onClick={this.onClick}
+            
+
                 className="btn btn-info btn-sm col-5 mr-1"
                 type="submit"
               >
