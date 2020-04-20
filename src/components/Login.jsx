@@ -37,8 +37,9 @@ class Login extends Component {
                        height="110" src={user.photoURL} alt="Responsive-image" />
                        <p>{user.email}</p>
                        </div>
-                    : <><h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h2>
-                      <p>Por favor ingrese</p></>
+                    : <div><h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h2>
+                      <p>Por favor ingrese</p>
+                      </div>
                 }
 
                 {
