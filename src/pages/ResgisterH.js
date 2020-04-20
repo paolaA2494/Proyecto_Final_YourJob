@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Register from '../components/Register';
 
 
+
 class RegisterH extends Component {
     constructor(props) {
         super(props);
@@ -14,6 +15,7 @@ class RegisterH extends Component {
             <React.Fragment>
                 <Navbar />
                 <Register />
+                
             </React.Fragment>
 
          );
