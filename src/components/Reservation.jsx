@@ -16,7 +16,7 @@ class Reservation extends React.Component {
     Swal.fire(
       "Para continuar tu solicitud ingresa sesión 😃",
       "You clicked the button",
-      "success"
+      
     );
   }
 
