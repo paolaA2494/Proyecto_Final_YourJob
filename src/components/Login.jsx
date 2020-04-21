@@ -87,7 +87,7 @@ class Login extends Component {
                       </button>
                       <Link to="/home" className="text-decoration-none">
                         <button onClick={onClick} className="btn border btn-info mt-3 d-block m-auto"  >
-                          <span>Inicio</span>
+                          <span>Confirmar</span>
                         </button>
                       </Link>
                     </div>
