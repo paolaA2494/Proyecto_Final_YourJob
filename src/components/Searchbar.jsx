@@ -14,7 +14,7 @@ class Searchbar extends Component {
             YourJob 
           </h1>
           <h3 className=" container text-center text-black-50 py-5">
-            Conéctate con tú Worker favortito
+            Conéctate con tú Worker favorito
           </h3>
           <h4 className="country text-center text-black-50 mb-5 ">
             A un solo Click!
