@@ -278,7 +278,7 @@ class Register extends Component {
         <div className="mx-auto col-6 col-ms-12 mt-5 text-center justify-content-center">
           <button
             onClick={this._Alerta}
-            className="btn btn-info btn-sm col-5 mr-1"
+            className="btn btn-info  mr-1"
             type="submit"
           >
             Registrar

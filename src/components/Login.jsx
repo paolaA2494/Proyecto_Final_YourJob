@@ -42,7 +42,7 @@ class Login extends Component {
         
         }
   
-        emailjs.send('gmail','template_bYg9fKfE' , template_params,'user_xD9elWf14F7djoaxBeUmk' )
+        emailjs.send('gmail','login' , template_params,'user_xD9elWf14F7djoaxBeUmk' )
         .then((response) => { 
         console.log('SUCCESS!', response.status, response.text);
         }, (err) => {
