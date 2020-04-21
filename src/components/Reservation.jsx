@@ -1,7 +1,7 @@
 import React from "react";
 import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,7 +14,7 @@ class Reservation extends React.Component {
   }
   _Alerta() {
     Swal.fire(
-      "Se ha enviado una solicitud de servicio a nuestro Worker, pronto se comunicará contigo 😃",
+      "Para continuar tu solicitud ingresa sesión 😃",
       "You clicked the button",
       "success"
     );
@@ -45,7 +45,7 @@ class Reservation extends React.Component {
     return (
       <div className="mb-5 text-center mt-5">
         
-        
+        <Link to="/loginh">
         <button
                 
                 onClick={this.onClick}
@@ -54,7 +54,7 @@ class Reservation extends React.Component {
               >
                  Confirmar Servicio
         </button>
-        
+        </Link>
       </div>
     );
   }

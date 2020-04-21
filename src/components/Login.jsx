@@ -6,18 +6,55 @@ import 'firebase/auth';
 import firebaseConfig from '../utils/firebaseConfig';
 import "./App.css";
 import { Link } from 'react-router-dom';
+import emailjs from 'emailjs-com';
+import Swal from "sweetalert2";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
+
 class Login extends Component {
 
+
+ 
   render() {
     const {
       user,
       signOut,
       signInWithGoogle,
     } = this.props;
+    
+    const {
+      _Alerta = () => {
+        Swal.fire(
+          "Se ha enviado una solicitud de servicio a nuestro Worker, pronto se comunicará contigo 😃",
+          "You clicked the button",
+          "success"
+        );
+      }
+    
+    } = this.props
 
+    const { onClick = () =>{
+      
+      _Alerta()
+
+      var template_params = {
+        "to_email": user.email,
+        
+        }
+  
+        emailjs.send('gmail','template_bYg9fKfE' , template_params,'user_xD9elWf14F7djoaxBeUmk' )
+        .then((response) => { 
+        console.log('SUCCESS!', response.status, response.text);
+        }, (err) => {
+        console.log('FAILED...', err);
+  
+       
+    });
+  
+    console.log("fjvei")
+  
+    } } = this.props;
 
     return (
       <div>
@@ -35,7 +72,7 @@ class Login extends Component {
                       <p>{user.displayName}</p>
                       <img class="rounded-circle mb-3" width="110" 
                        height="110" src={user.photoURL} alt="Responsive-image" />
-                       <p>{user.email}</p>
+                       <p id="email">{user.email}</p>
                        </div>
                     : <div><h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h2>
                       <p>Por favor ingrese</p>
@@ -49,7 +86,7 @@ class Login extends Component {
                         <span>Cerrar Sesión</span>
                       </button>
                       <Link to="/home" className="text-decoration-none">
-                        <button className="btn border btn-info mt-3 d-block m-auto"  >
+                        <button onClick={onClick} className="btn border btn-info mt-3 d-block m-auto"  >
                           <span>Inicio</span>
                         </button>
                       </Link>
@@ -78,6 +115,8 @@ class Login extends Component {
     );
   }
 }
+
+
 
 const firebaseAppAuth = firebaseApp.auth();
 
