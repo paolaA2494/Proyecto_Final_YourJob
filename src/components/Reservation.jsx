@@ -14,7 +14,7 @@ class Reservation extends React.Component {
   }
   _Alerta() {
     Swal.fire(
-      "Para continuar tu solicitud ingresa sesión 😃",
+      "Para continuar tu solicitud inicia sesión 😃",
       "You clicked the button",
       
     );
@@ -52,7 +52,7 @@ class Reservation extends React.Component {
                 className="btn btn-info  mr-1"
                 type="submit"
               >
-                 Confirmar Servicio
+                 Solicitar Servicio
         </button>
         </Link>
       </div>

@@ -67,13 +67,13 @@ class Login extends Component {
                 {
                   user
                     ? <div>
-                      <h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">¡Bienvenido!</h2>
+                      <h1 className="h3 mb-3 font-weight-normal text-info font-weight-bold">¡Bienvenido!</h1>
                       <p>{user.displayName}</p>
                       <img class="rounded-circle mb-3" width="110" 
                        height="110" src={user.photoURL} alt="Responsive-image" />
                        <p id="email">{user.email}</p>
                        </div>
-                    : <div><h2 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h2>
+                    : <div><h1 className="h3 mb-3 font-weight-normal text-info font-weight-bold">Iniciar Sesión</h1>
                       <p>Por favor ingrese</p>
                       </div>
                 }
